@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            div.main {
+
+                width: 300px;
+                margin: 40px auto 10px auto;
+              
+                
+            }
+
+            * {
+                box-sizing: border-box;
+               
+            }
+
+            h1 {
+                text-align: center;
+                padding: 5px;
+                color: rgb(83, 82, 82)
+            }
+
+            div.login {
+                margin-top: 150px;
+                width: 350px;
+                height: 350px;
+                font-size: 18px;
+                border-radius: 15px;
+                border: none;
+                box-shadow: 1px 1px 15px rgb(182, 184, 184);
+                color: #666;
+                
+            }
+
+            form #register {
+                margin: 50px;
+            
+            }
+
+            input#name {
+                margin-left: 20px;
+                width: 300px;
+                border: 1px solid rgb(177, 180, 180);
+                border-radius: 6px;
+                padding: 8px;
+
+            }
+
+
+            input#pwd {
+                margin-left: 20px;
+                width: 300px;
+                border: 1px solid rgb(160, 161, 161);
+                border-radius: 6px;
+                padding: 8px;
+
+
+            }
+
+            button#submit {
+                margin-left: 20px;
+                width: 300px;
+                padding: 8px;
+                font-size: 15px;
+                font-weight: 600;
+                font-family: sans serif;
+                border: none;
+                border-radius: 6px;
+                background-color: rgb(87, 88, 88);
+                color: #fff;
+                cursor: pointer;
+                border: none;
+
+            }
+
+            button#submit:hover {
+                background-color: rgb(133, 130, 130);
+
+            }
+
+            a {
+                text-decoration: none;
+
+            }
+
+            a:hover {
+                color: rgb(180, 182, 182);
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="login">
+                <form id="register" method="post">
+                    {% csrf_token %}
+                    <br>
+                    <h1>Login</h1>
+
+                    <input type="email" id="name" placeholder="Username">
+                    <br><br>
+                    <input type="password" id="pwd" placeholder="password">
+                    <br><br>
+                    <button type="submit" id="submit">Login</button>
+                    <br><br>
+                    <div class="text center">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Do not have account?
+                        <a href="sign up.html">SignUp here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
